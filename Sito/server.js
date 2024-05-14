@@ -24,6 +24,9 @@ app.get('/AudiA6', function(req, res){
 app.get('/AudiA7', function(req, res){
     res.sendFile(path.join(__dirname, 'pagine.html/A7.html'))
 });
+app.get('/Contatti', function(req, res){
+    res.sendFile(path.join(__dirname, 'pagine.html/Contatti.html'))
+});
 app.listen(3000, function () {
     console.log('Example app listening on port 3000');
 });

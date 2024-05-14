@@ -5,10 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audi A6</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animated-bg {
+            background: linear-gradient(-45deg, #ffcc00, #ff6600, #00ff26, #6600cc);
+            background-size: 400% 400%;
+            animation: backgroundAnimation 10s ease infinite;
+            color: white;
+        }
+        .card {
+            background-color: rgba(0, 0, 0, 0.7); /* Background semi-trasparente per rendere il testo leggibile */
+            color: white; /* Colore del testo bianco */
+        }
+    </style>
 </head>
 <body class="bg-primary"> <!-- Utilizziamo bg-light per uno sfondo chiaro -->   
 
-  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
     <div class="container">
         <a class="navbar-brand">VendoAuto</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,49 +51,85 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/AudiA7">Audi A7</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contatti">Contatti</a>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
 
+<div class="container-fluid mt-4 bg-animated animated-bg">
+    <h1 class="text-center">Audi A6 Limousine</h1>
+    <div class="row justify-content-around">
+        <div class="col-md-8">
+            <div class="card border-info shadow">
+                <img src="https://i0.wp.com/www.autoprove.it/wp-content/uploads/2021/12/audi-a6-rest-front1.jpg.jpg?fit=1600%2C900&ssl=1" class="card-img-top" alt="Audi Logo">
+                <div class="card-body">
+                    <p class="card-text">Anno Modello: 2023</p>
+                    <p class="card-text">Cavalli: 299</p>
+                    <p class="card-text">Cilindrata: 1984</p>
+                    <p class="card-text">Velocità Massima: 250 km/h</p>
+                    <p class="card-text">Tempo da 0 a 100 km/h: 6.2 secondi</p>
+                    <p class="card-text">Carburante: Benzina/Elettricità</p>
+                    <p class="card-text">Cambio: Automatico</p>
+                    <p class="card-text">Chilometraggio Attuale: 12,000 km</p>
+                    <p class="card-text">Sistema di Navigazione: Sì</p>
+                    <p class="card-text">Climatizzatore: Sì</p>
+                    <p class="card-text">Sedili Riscaldabili: Sì</p>
+                    <p class="card-text">Sensori di Parcheggio: Sì</p>
+                    <p class="card-text">Freno Automatico: Sì</p>
+                    <p class="card-text">Telecamera Posteriore: Sì</p>
+                    <p class="card-text">Numero di Proprietari Precedenti: 1</p>
+                    <p class="card-text">Presenza di Garanzia: Sì, 1 anno</p>
+                    <p class="card-text">Ultima Revisione: Aprile 2024</p>
+                    <p class="card-text">Controlli Effettuati: Freni, Motore, Sospensioni</p>
+                    <p class="card-text">Disponibilità di Libretto dei Tagliandi: Sì</p>
+                    <p class="card-text">Documentazione di Interventi di Manutenzione: Sì</p>
+                    <p class="card-text">Certificato di Proprietà: Sì</p>
+                    <p class="card-text">Possibilità di Finanziamento o Permuta: Sì</p>
+                    <p class="card-text">Prezzo: 89.625,02€</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
 
-<div class="container-fluid mt-4 bg-info">
-  <h1 class="text-center">Audi A6 Limousine</h1>
-  <div class="row justify-content-around">
-      <div class="col-md-8">
-          <div class="card border-info shadow">
-              <img src="https://i0.wp.com/www.autoprove.it/wp-content/uploads/2021/12/audi-a6-rest-front1.jpg.jpg?fit=1600%2C900&ssl=1" class="card-img-top" alt="Audi Logo">
-              <div class="card-body">
-                  <p class="card-text">Anno Modello: 2023</p>
-                  <p class="card-text">Cavalli: 299</p>
-                  <p class="card-text">Cilindrata: 1984</p>
-                  <p class="card-text">Velocità Massima: 250 km/h</p>
-                  <p class="card-text">Tempo da 0 a 100 km/h: 6.2 secondi</p>
-                  <p class="card-text">Carburante: Benzina/Elettricità</p>
-                  <p class="card-text">Prezzo: 89.625,02€</p>
-              </div>
-          </div>
-      </div>
-  </div>
+<div class="container-fluid mt-4 bg-animated animated-bg">
+    <h1 class="text-center">Audi RS6 Berlina</h1>
+    <div class="row justify-content-around">
+        <div class="col-md-8">
+            <div class="card border-info shadow">
+                <img src="https://www.motortrend.com/uploads/2023/01/2023-Audi-RS-6-Avant-32.jpg?fit=around%7C551:374" class="card-img-top" alt="Audi Logo">
+                <div class="card-body">
+                    <p class="card-text">Anno Modello: 2023</p>
+                    <p class="card-text">Cavalli: 600</p>
+                    <p class="card-text">Cilindrata: 3996</p>
+                    <p class="card-text">Velocità Massima: 250 km/h</p>
+                    <p class="card-text">Tempo da 0 a 100 km/h: 3.6 secondi</p>
+                    <p class="card-text">Carburante: Benzina</p>
+                    <p class="card-text">Cambio: Automatico</p>
+                    <p class="card-text">Chilometraggio Attuale: 8,000 km</p>
+                    <p class="card-text">Sistema di Navigazione: Sì</p>
+                    <p class="card-text">Climatizzatore: Sì</p>
+                    <p class="card-text">Sedili Riscaldabili: Sì</p>
+                    <p class="card-text">Sensori di Parcheggio: Sì</p>
+                    <p class="card-text">Freno Automatico: Sì</p>
+                    <p class="card-text">Telecamera Posteriore: Sì</p>
+                    <p class="card-text">Numero di Proprietari Precedenti: 1</p>
+                    <p class="card-text">Presenza di Garanzia: Sì, 2 anni</p>
+                    <p class="card-text">Ultima Revisione: Marzo 2024</p>
+                    <p class="card-text">Controlli Effettuati: Freni, Motore, Sospensioni</p>
+                    <p class="card-text">Disponibilità di Libretto dei Tagliandi: Sì</p>
+                    <p class="card-text">Documentazione di Interventi di Manutenzione: Sì</p>
+                    <p class="card-text">Certificato di Proprietà: Sì</p>
+                    <p class="card-text">Possibilità di Finanziamento o Permuta: Sì</p>
+                    <p class="card-text">Prezzo: 161.120,00€</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div> 
-<div class="container-fluid mt-4 bg-info">
-  <h1 class="text-center">Audi RS6 Berlina</h1>
-  <div class="row justify-content-around">
-      <div class="col-md-8">
-          <div class="card border-info shadow">
-              <img src="https://www.motortrend.com/uploads/2023/01/2023-Audi-RS-6-Avant-32.jpg?fit=around%7C551:374" class="card-img-top" alt="Audi Logo">
-              <div class="card-body">
-                  <p class="card-text">Anno Modello: 2023</p>
-                  <p class="card-text">Cavalli: 600</p>
-                  <p class="card-text">Cilindrata: 3996</p>
-                  <p class="card-text">Velocità Massima: 250 km/h</p>
-                  <p class="card-text">Tempo da 0 a 100 km/h: 3.6 secondi</p>
-                  <p class="card-text">Carburante: Benzina</p>
-                  <p class="card-text">Prezzo: 161.120,00€</p>
-              </div>
-          </div>
-      </div>
-  </div>
-</div> 
+
 </body>
 </html>

@@ -16,8 +16,12 @@
             animation: backgroundAnimation 10s ease infinite;
             color: rgb(44, 36, 36);
         }
+        #map {
+            height: 400px;
+            width: 100%;
+        }
     </style>
-    <title>VendoAuto.it</title>
+    <title>VendoAuto.it - Contatti</title>
 </head>
 <body>
 
@@ -47,20 +51,55 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/AudiA7">Audi A7</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contatti">Contatti</a>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<div class="container mt-4">
+<div class="container mt-4 animated-bg">
     <div class="jumbotron text-center">
-        <h1 class="display-4">Concessionario Audi</h1>
-        <p class="lead">Benvenuto nel nostro concessionario, se vuoi acquistare un automobile puoi visualizzare le nostre pagine seguenti, abbiamo dei modelli limitati con tutte le specifiche tecniche.</p>
+        <h1 class="display-4">Contattaci</h1>
+        <p class="lead">Hai domande o vuoi ulteriori informazioni sui nostri veicoli? Contattaci utilizzando i dettagli di seguito o compilando il modulo di contatto.</p>
     </div>
-    <div class="text-center">
-        <img src="https://www.motorionline.com/wp-content/uploads/2023/06/Concessionarie-Audi-1024x723.jpg" class="img-fluid" alt="home">
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="mb-4">Dettagli di Contatto</h2>
+            <ul class="list-unstyled">
+                <li><strong>Indirizzo:</strong> Via Roma 123, 00100 Roma (RM)</li>
+                <li><strong>Telefono:</strong> +39 06 1234567</li>
+                <li><strong>Email:</strong> info@vendoauto.it</li>
+            </ul>
+            <h2 class="mb-4">Orari di Apertura</h2>
+            <ul class="list-unstyled">
+                <li><strong>Lunedì - Venerdì:</strong> 9:00 - 18:00</li>
+                <li><strong>Sabato:</strong> 9:00 - 13:00</li>
+                <li><strong>Domenica:</strong> Chiuso</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h2 class="mb-4">Trova la Nostra Sede</h2>
+            <div id="map"></div>
+        </div>
     </div>
-</div> 
+</div>
+
+<script>
+    function initMap() {
+        var location = {lat: 41.9028, lng: 12.4964}; // Coordinate di Roma
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: location,
+            zoom: 15
+        });
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map
+        });
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 
 </body>
 </html>
