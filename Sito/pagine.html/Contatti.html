@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti - VendoAuto.it</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         @keyframes backgroundAnimation {
@@ -16,12 +17,15 @@
             animation: backgroundAnimation 10s ease infinite;
             color: rgb(44, 36, 36);
         }
+        .card {
+            background-color: rgba(0, 0, 0, 0.7); /* Background semi-trasparente per rendere il testo leggibile */
+            color: white; /* Colore del testo bianco */
+        }
         #map {
             height: 400px;
             width: 100%;
         }
     </style>
-    <title>VendoAuto.it - Contatti</title>
 </head>
 <body>
 
@@ -62,25 +66,32 @@
 <div class="container mt-4 animated-bg">
     <div class="jumbotron text-center">
         <h1 class="display-4">Contattaci</h1>
-        <p class="lead">Hai domande o vuoi ulteriori informazioni sui nostri veicoli? Contattaci utilizzando i dettagli di seguito o compilando il modulo di contatto.</p>
+        <p class="lead">Siamo qui per aiutarti. Compila il modulo sottostante o vieni a trovarci presso la nostra sede.</p>
     </div>
     <div class="row">
         <div class="col-md-6">
-            <h2 class="mb-4">Dettagli di Contatto</h2>
-            <ul class="list-unstyled">
-                <li><strong>Indirizzo:</strong> Via Roma 123, 00100 Roma (RM)</li>
-                <li><strong>Telefono:</strong> +39 06 1234567</li>
-                <li><strong>Email:</strong> info@vendoauto.it</li>
-            </ul>
-            <h2 class="mb-4">Orari di Apertura</h2>
-            <ul class="list-unstyled">
-                <li><strong>Lunedì - Venerdì:</strong> 9:00 - 18:00</li>
-                <li><strong>Sabato:</strong> 9:00 - 13:00</li>
-                <li><strong>Domenica:</strong> Chiuso</li>
-            </ul>
+            <div class="card border-info shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Contattaci</h5>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" class="form-control" id="name" placeholder="Il tuo nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="La tua email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Messaggio</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Il tuo messaggio"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Invia</button>
+                    </form>
+                </div>
+            </div>
         </div>
         <div class="col-md-6">
-            <h2 class="mb-4">Trova la Nostra Sede</h2>
             <div id="map"></div>
         </div>
     </div>
@@ -88,10 +99,10 @@
 
 <script>
     function initMap() {
-        var location = {lat: 41.9028, lng: 12.4964}; // Coordinate di Roma
+        var location = {lat: 45.4642, lng: 9.1900}; // Milano, Italia
         var map = new google.maps.Map(document.getElementById('map'), {
-            center: location,
-            zoom: 15
+            zoom: 15,
+            center: location
         });
         var marker = new google.maps.Marker({
             position: location,
@@ -99,7 +110,7 @@
         });
     }
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMyGj3AGUgVhGDErVDoeNn0hZcxugy-zM&callback=initMap"></script>
 
 </body>
 </html>
